@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>ehseb</h1>
+    </header>
+    <main class="clearfix">
+      <section class="container">
+        <article class="note">
+          <div class="title">
+            <h2 id="su">Francais</h2>
+            <div class="underline"></div>
+          </div>
+          <div class="box controle">
+            <span>Devoir de conrtole</span>
+            <input min="0" max="20" id="controle" type="number" />
+          </div>
+          <div class="box oral">
+            <span id="oralLabel">Oral</span>
+            <input min="0" max="20" id="oral" type="number" />
+          </div>
+          <div class="box synthese">
+            <span>devoir de synthese</span>
+            <input min="0" max="20" id="synthese" type="number" />
+          </div>
+          <div class="button-container">
+            <button class="prev-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="next-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <button class="hidden" id="calc">calc</button>
+        </article>
+      </section>
+      <h1 id="average"></h1>
+    </main>
+    <script src="newjs.js"></script>
+  </body>
+</html>
