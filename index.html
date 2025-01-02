@@ -13,45 +13,69 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Home - Student Helper</title>
+    <link rel="stylesheet" href="styles/styles2.css" />
   </head>
   <body>
     <header>
-      <h1>ehseb</h1>
+      <a href="#" id="home-link">Home</a>
     </header>
-    <main class="clearfix">
-      <section class="container">
-        <article class="note">
-          <div class="title">
-            <h2 id="su">Francais</h2>
-            <div class="underline"></div>
-          </div>
-          <div class="box controle">
-            <span>Devoir de conrtole</span>
-            <input min="0" max="20" id="controle" type="number" />
-          </div>
-          <div class="box oral">
-            <span id="oralLabel">Oral</span>
-            <input min="0" max="20" id="oral" type="number" />
-          </div>
-          <div class="box synthese">
-            <span>devoir de synthese</span>
-            <input min="0" max="20" id="synthese" type="number" />
-          </div>
-          <div class="button-container">
-            <button class="prev-btn">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="next-btn">
-              <i class="fas fa-chevron-right"></i>
-            </button>
-          </div>
-          <button class="hidden" id="calc">calc</button>
-        </article>
+    <main>
+      <section class="grid-container">
+        <div class="grid-item">
+          <a href="subject/math.html">
+            <img src="images/calc.png" alt="Math" />
+            <p>Math</p>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="#">
+            <img src="images/atom.png" alt="Physics" />
+            <p>Physics</p>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="#">
+            <img src="images/problem-solving.png" alt="Programmation" />
+            <p>Programmation</p>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="#">
+            <img src="images/programmer.png" alt="STI" />
+            <p>STI</p>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="#">
+            <img src="images/english.png" alt="English" />
+            <p>English</p>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="#">
+            <img src="images/building.png" alt="Francais" />
+            <p>Francais</p>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="#">
+            <img src="images/elearning.png" alt="Option" />
+            <p>Option</p>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="#">
+            <img src="images/entrance.png" alt="Arabic" />
+            <p>Arabic</p>
+          </a>
+        </div>
       </section>
-      <h1 id="average"></h1>
+
+      <aside>
+        <iframe src="calc.html" frameborder="0"></iframe>
+      </aside>
     </main>
-    <script src="newjs.js"></script>
+    <footer>&copy; 2025 ingerha</footer>
   </body>
 </html>
