@@ -38,18 +38,19 @@ header a {
 main {
   margin: auto;
   width: 70%;
-  height: 60vh;
+  height: 80vh;
   margin-top: 20px;
-  display: grid;
-  grid-template-columns: 3fr 1.5fr;
-  grid-gap: 3em;
+  display: flex;
+  gap: 2em;
 }
 
 .grid-container {
   width: 100%;
   display: flex;
+  align-content: start;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
+  overflow: auto;
 }
 
 .grid-item {
@@ -76,17 +77,18 @@ main {
   transition: all 0.3s;
 }
 
-.grid-item img{
+.grid-item img {
   transition: 0.3s;
 }
 .grid-item:hover a {
   color: var(--sec-color);
 }
 .grid-item:hover img {
-  transform: translate(5px,5px);
+  transform: translate(5px, 5px);
 }
 aside {
   height: 100%;
+  width: 40%;
 }
 iframe {
   width: 100%;
@@ -100,12 +102,14 @@ footer {
   margin-top: 20px;
   width: 100%;
 }
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   main {
     width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    height: 100vh;
+    gap: 0;
+    flex-direction: column;
   }
+
   section {
     margin: auto;
     width: 90%;
@@ -114,5 +118,16 @@ footer {
     margin: auto;
     height: 50px;
     width: 80%;
+  }
+  .grid-item a {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .grid-item img {
+    width: 50px;
+  }
+  aside {
+    width: 100%;
   }
 }
