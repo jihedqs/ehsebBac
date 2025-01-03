@@ -9,17 +9,15 @@ function Subject(subject, dvrConDis, dvrOralDis, somme, multiplier) {
 }
 
 const mat = [
-  new Subject("Francais", "visible", "visible", 4, 2),
-  new Subject("Philo", "hidden", "visible", 2, 1),
-  new Subject("English", "visible", "visible", 4, 2),
-  new Subject("Arab", "visible", "visible", 4, 1),
+  new Subject("Francais", "visible", "visible", 4, 1),
+  new Subject("Philo", "visible", "visible", 4, 1),
+  new Subject("English", "visible", "visible", 4, 1),
+  new Subject("Arab", "hidden", "hidden", 2, 1),
   new Subject("Option", "visible", "visible", 4, 1),
-  new Subject("Histoire", "visible", "visible", 4, 1),
-  new Subject("Geo", "visible", "visible", 4, 1),
   new Subject("Prog", "visible", "visible", 4, 3),
   new Subject("STI", "visible", "visible", 4, 3),
+  new Subject("Physique", "visible", "visible", 4, 2),
   new Subject("Math", "visible", "hidden", 3, 3),
-  new Subject("Physique", "visible", "visible", 4, 3),
   new Subject("Sport", "visible", "hidden", 3, 1),
 ];
 
@@ -148,7 +146,7 @@ calc.addEventListener("click", function () {
       mat.reduce(
         (acc, sub) => acc + parseFloat(sub.average) * sub.multiplier,
         0
-      ) / 22;
+      ) / 17;
     averageDisplay.textContent = `Moyen: ${res.toFixed(2)}`;
   }
 });

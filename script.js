@@ -10,7 +10,7 @@ function Subject(subject, dvrConDis, dvrOralDis, somme, multiplier) {
 
 const mat = [
   new Subject("Francais", "visible", "visible", 4, 2),
-  new Subject("Philo", "hidden", "visible", 2, 1),
+  new Subject("Philo", "hidden", "hidden", 2, 1),
   new Subject("English", "visible", "visible", 4, 2),
   new Subject("Arab", "visible", "visible", 4, 1),
   new Subject("Option", "visible", "visible", 4, 1),
@@ -42,6 +42,7 @@ prev.classList.add("hidden");
 
 let num = 0;
 let clicker = false;
+let scores = [];
 
 function show(num) {
   let sub = mat[num];
@@ -137,6 +138,7 @@ prev.addEventListener("click", function () {
     clicker = false;
   });
 });
+let i = localStorage.length;
 
 calc.addEventListener("click", function () {
   if (!clicker) {
@@ -150,5 +152,58 @@ calc.addEventListener("click", function () {
         0
       ) / 22;
     averageDisplay.textContent = `Moyen: ${res.toFixed(2)}`;
+    scores.push(res.toFixed(2));
+    i = localStorage.length + 1;
+    window.localStorage.setItem("score" + i, res.toFixed(2));
+    console.log(mat);
+    console.log(scores);
+    tableApp();
+    tableScore();
   }
 });
+
+function clearLastAverages() {
+  const rowCount = table.rows.length;
+  for (let i = rowCount - 1; i > 0; i--) {
+    table.deleteRow(i);
+  }
+}
+
+function tableApp() {
+  clearLastAverages();
+  mat.forEach((sub) => {
+    const row = table.insertRow(table.rows.length);
+    const cellSubject = row.insertCell(0);
+    const cellScore = row.insertCell(1);
+
+    cellSubject.textContent = sub.subject;
+    cellScore.textContent = sub.average || "0.00";
+  });
+}
+
+window.onload = function () {
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (key.startsWith("score")) {
+      const score = localStorage.getItem(key);
+      if (score) {
+        scores.push(score);
+      }
+    }
+  }
+  scores.forEach((score, index) => {
+    const row = sctable.insertRow();
+    const colNum = row.insertCell(0);
+    const colScore = row.insertCell(1);
+    colNum.textContent = index + 1;
+    colScore.textContent = score;
+  });
+};
+
+function tableScore() {
+  const row = sctable.insertRow();
+  const colNum = row.insertCell(0);
+  const colScore = row.insertCell(1);
+  colNum.textContent = scores.length;
+  colScore.textContent = scores[scores.length - 1];
+}
