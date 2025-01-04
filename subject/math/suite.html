@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>suite</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+      transition: all 0.2s linear;
+    }
+    body {
+      background-color: #f0f2f9;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .gallery a {
+      height: 500px;
+      width: 350px;
+      margin: 20px;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 3px 5px hsl(231, 37%, 10%, 35%);
+    }
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    img:hover {
+      transform: scale(1.2);
+    }
+  </style>
+  <body>
+    <div class="gallery">
+      <a href="suites-1.png">
+        <img src="suites-1.png" alt="" />
+      </a>
+    </div>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"
+    integrity="sha512-b4rL1m5b76KrUhDkj2Vf14Y0l1NtbiNXwV+SzOzLGv6Tz1roJHa70yr8RmTUswrauu2Wgb/xBJPR8v80pQYKtQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script>
+    lightGallery(document.querySelector(".gallery"));
+  </script>
+</html>
