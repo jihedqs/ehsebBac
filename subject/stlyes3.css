@@ -11,19 +11,21 @@ body {
   background-color: var(--bac-color);
   font-family: "Poppins", serif;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
   padding: 20px;
-  align-items: start;
   min-height: 100vh;
-  margin: 0;
+  margin: auto;
 }
 
 .box-container {
   display: flex;
+  flex-direction: column;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 10px;
   justify-content: center;
-  max-width: 40%;
+  width: 70%;
 }
 
 a.box {
@@ -44,4 +46,37 @@ a.box {
 a.box:hover {
   transform: scale(1.05);
   background-color: var(--main-color);
+}
+
+.breadcrumb {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 5px;
+  font-size: 19px;
+  color: white;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: var(--tex-color);
+  font-weight: bold;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .separator {
+  margin: 0 10px;
+  font-size: 20px;
+  color: var(--tex-color);
+}
+
+.breadcrumb .topic {
+  color: var(--acc-color);
+}
+
+.breadcrumb .topic:hover {
+  color: var(--main-color);
 }
